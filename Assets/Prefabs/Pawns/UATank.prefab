@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7037251293385827460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5196944623832825422}
+  m_Layer: 0
+  m_Name: firepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5196944623832825422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037251293385827460}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 1.175}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2424226290222244620}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2751186497349698791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,7 +85,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5196944623832825422}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
       insertIndex: -1
@@ -68,7 +102,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6215554678732480896}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3417693542542742709}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4033479952665572072}
   m_SourcePrefab: {fileID: 100100000, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
+--- !u!4 &2424226290222244620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
+  m_PrefabInstance: {fileID: 2751186497349698791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3093766627086072246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d424837c1aa9a4982b3487bf363dc5, type: 3}
@@ -137,6 +182,12 @@ MonoBehaviour:
   moveSpeed: 10
   turnSpeed: 360
   mover: {fileID: 0}
+  shooter: {fileID: 0}
+  shellPrefab: {fileID: 4765535113838898891, guid: 1e6bc801b00bf7e4ea5417ebddb5fe3f, type: 3}
+  fireForce: 1000
+  damageDone: 10
+  shellLifespan: 3
+  fireRate: 1
 --- !u!114 &6215554678732480896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,3 +200,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ccae849d7cc0f42af8c2f440466997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-3417693542542742709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093766627086072246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82decee599360114c933fb180c01195d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepointTransform: {fileID: 5196944623832825422}
+--- !u!114 &-4033479952665572072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3093766627086072246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98e1760c6a77db4b87ebf9534c4552a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 100
+  maxHealth: 100
